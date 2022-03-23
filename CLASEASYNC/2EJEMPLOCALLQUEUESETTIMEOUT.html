@@ -7,7 +7,11 @@
 
     const nombre = prompt("INGRESA TU NOMBRE");
     const nodo = document.querySelector("#bienvenido");
+    nodo.innerHTML=`<h1>Cargando Info...</h1>`;
     
+    setTimeout(()=>{
+        nodo.innerHTML=`<h1>Bienvenido, ${nombre}</h1>`;
+    }, 3000);
 
 </script>
 
