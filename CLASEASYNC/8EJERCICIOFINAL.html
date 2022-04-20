@@ -41,19 +41,6 @@
    })
   
 
-   let datoUsuario = prompt("Indique true o false");
-   datoUsuario = datoUsuario==="true" ? true : false;
-   res(datoUsuario)
-   .then((resultado)=>{
-     const nodo = document.querySelector("#listaUsuarios");
-     resultado.forEach(element=>{
-       const li = document.createElement("li");
-       li.innerHTML=`${element.id} ${element.nombre}`;
-       nodo.appendChild(li);
-     });
-    })
-    .catch((error)=>alert(error))
-    .finally(()=>alert("Gracias por usar nuestro"));
-
+   
 
 </script>

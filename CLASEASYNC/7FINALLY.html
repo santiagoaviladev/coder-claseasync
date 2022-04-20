@@ -31,9 +31,24 @@
     evento(resuelve)
     .then((result)=>console.log(result))
     .catch((error)=>console.log(error))
-    .finally(()=>console.log("FIN DEL PROCESO"));
+    
     
  
     
  
+    let res  = async () =>{
+
+
+        try{
+            let a = await pedirDatos();
+            let b = a*10; 
+        }
+        catch{
+            console.log("Ocurrio un error");
+        }
+
+
+    }
+
+
  </script>
