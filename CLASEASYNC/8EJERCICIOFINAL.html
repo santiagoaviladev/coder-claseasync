@@ -1,4 +1,4 @@
-<div id="listaUsuarios"></div>
+<div id="listaUsuarios">Loading...</div>
 <script>
 
   const usuarios = [
@@ -36,13 +36,14 @@
       }
 
    })
-  
-
    let datoUsuario = prompt("Indique true o false");
+ 
+setTimeout(()=>{
    datoUsuario = datoUsuario==="true" ? true : false;
    res(datoUsuario)
    .then((resultado)=>{
      const nodo = document.querySelector("#listaUsuarios");
+     nodo.innerHTML="";
      resultado.forEach(element=>{
        const li = document.createElement("li");
        li.innerHTML=`${element.id} ${element.nombre}`;
@@ -51,6 +52,6 @@
     })
     .catch((error)=>alert(error))
     .finally(()=>alert("Gracias por usar nuestro"));
-
+  }, 5000)
 
 </script>
