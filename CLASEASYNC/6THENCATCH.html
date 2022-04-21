@@ -1,18 +1,15 @@
 <script>
 
-    
-
-    
     const evento = (res) => new Promise((resolve, reject)=>{
  
      if(res===true)
      {
-         resolve("LA PROMESA SE RESOLVIÓ")
+         resolve({id:1,usuario:"Marcelo"});
  
      }
      else
      {
-         reject("LA PROMESA NO SE RESOLVIÓ")
+         reject("404: LA PROMESA NO SE RESOLVIÓ EN LA CLASE")
      }
  
     });
@@ -28,8 +25,9 @@
     }
 
 
-    evento(resuelve)
-    
+    evento(resuelve).
+    then((response)=>console.log(response)).
+    catch((error)=>console.log(error));
     
  
     

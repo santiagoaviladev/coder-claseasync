@@ -8,7 +8,13 @@
 
 <script>
 
-
+  const nodo = document.querySelector("#segundos")
+  let segundos = 1;
+  
+  setInterval(()=>{
+    nodo.innerHTML=segundos;
+    segundos+=1;
+  }, 1000);
 
 
 

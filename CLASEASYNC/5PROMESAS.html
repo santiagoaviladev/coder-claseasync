@@ -1,18 +1,15 @@
 <script>
 
-    
-
-    
    const evento = (res) => new Promise((resolve, reject)=>{
 
     if(res===true)
     {
-        resolve("LA PROMESA SE RESOLVIÓ")
+        resolve({id:1, nombre:"HOLA"});
 
     }
     else
     {
-        reject("LA PROMESA NO SE RESOLVIÓ")
+        reject("LA PROMESA NO SE RESOLVIÓ");
     }
 
    });

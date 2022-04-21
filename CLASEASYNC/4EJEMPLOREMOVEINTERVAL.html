@@ -6,7 +6,18 @@
 
 <script>
 
-   
+const nodo = document.querySelector("#segundos")
+  let segundos = 5;
+  
+ let intervalHandler =  setInterval(()=>{
+    nodo.innerHTML=segundos;
+    
+    if(segundos==0)
+    {
+       clearInterval(intervalHandler);
+    }
+    segundos-=1;
+  }, 1000);
    
    
     
